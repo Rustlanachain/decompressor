@@ -32,7 +32,11 @@ fn real_main() -> i32{
                 println!("file {} comment {}",i,comment);
             }
         }
-        
+        if *file.name().ends_with('/') {
+
+            println!("file {} extracted to \"{}",i,outpath.display());
+        }
+
     }
     0
 }
