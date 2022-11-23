@@ -26,6 +26,13 @@ fn real_main() -> i32{
             Some(path)=>path.to_owned(),
             None => continue,
         };
+        {
+            let comment=file.comment();
+            if !comment.is_empty(){
+                println!("file {} comment {}",i,comment);
+            }
+        }
+        
     }
     0
 }
